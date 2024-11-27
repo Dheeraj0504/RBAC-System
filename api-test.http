@@ -1,0 +1,74 @@
+### Sign Up API: Create a new user
+POST http://localhost:3000/sign-up
+Content-Type: application/json
+
+{
+  "username": "john_doe",
+  "email": "john@example.com",
+  "password": "password123",
+  "role": "User"
+}
+
+###
+
+### Login API: User Login
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "john@gmail.com",
+  "password": "123456",
+}
+
+###
+
+### Get Roles: Fetch all roles
+GET http://localhost:3000/roles
+
+###
+
+### Profile API: Get authenticated user's profile
+GET http://localhost:3000/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IlVzZXIiLCJpYXQiOjE3MzI2OTk3MDksImV4cCI6MTczMjc4NjEwOX0.LVe_YW2AfnBkAFCjNF4_1LfyyzJQ4oTG91W5O8ocwDY
+
+###
+
+### Admin API: Access the Admin route (only for Admin role)
+GET http://localhost:3000/admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6IkFkbWluIiwiaWF0IjoxNzMyNjk5ODg0LCJleHAiOjE3MzI3ODYyODR9.-i0VUpp34AYONWYBodF_N6qlhO28-TP8TlT6fT42I2g
+
+###
+
+### User API: Access the User route (only for User role)
+GET http://localhost:3000/user
+Authorization: Bearer <JWT_Token>
+
+###
+
+### Admin-Manager API: Access route for Admin or Manager role
+GET http://localhost:3000/admin-manager
+Authorization: Bearer <JWT_Token>
+
+###
+
+### Update Profile API: Update the authenticated user's profile
+PUT http://localhost:3000/update-profile
+Authorization: Bearer <JWT_Token>
+Content-Type: application/json
+
+{
+  "username": "john_doe_updated",
+  "email": "john_updated@example.com",
+  "password": "newpassword456"
+}
+
+###
+
+### Delete Profile API: Delete the authenticated user's profile
+DELETE http://localhost:3000/delete-profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlVzZXIiLCJpYXQiOjE3MzI2OTg4OTAsImV4cCI6MTczMjc4NTI5MH0.N48h5tM_b06rgMKSl1e0N7m3LKjMhwOuiXhWQ8OTba8
+
+###
+
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwicm9sZSI6Ik1vZGVyYXRvciIsImlhdCI6MTczMjY5OTYyMCwiZXhwIjoxNzMyNzg2MDIwfQ.cRXfvZoAOsExwM1rU-dk_UD-sN5P3QyAzT_gxqNZvAY
